@@ -1,4 +1,22 @@
 #include "HistoryList.h"
+#include <iostream>
+
+void HistoryList::printHistory() const{
+    Node* temp=head;
+    if(head == nullptr){
+        std::cout << "Historico Vazio:";
+        return;
+    }
+    while(temp != nullptr){
+        if(temp == current){ // significa que eu estou na pagina atual do historico
+            std::cout << "Pagina Atual do seu historico :" << temp->url;
+        }else{
+            std::cout << "Site visitado:" <<temp->url << std::endl;
+        }
+        temp=temp->next;
+    }
+     std::cout <<"Esse foi o seu historico de Acesso!";
+}
 
 bool HistoryList::forward(){
     if(current == nullptr || current->next==nullptr){
