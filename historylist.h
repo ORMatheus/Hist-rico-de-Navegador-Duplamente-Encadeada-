@@ -1,8 +1,7 @@
 #ifndef HISTORYLIST_H
 #define HISTORYLIST_H
 
-#include <iostream>
-#include <string.h>
+#include <string>
 
 class HistoryList; //forward 
 
@@ -13,11 +12,7 @@ class Node{
         Node* next;
         Node* prev;
     public:
-    Node(const std::string& str){
-        this->url=str;
-        this->next=nullptr;
-        this->prev=nullptr;
-    }
+    Node(const std::string& str);
 };
 
 class HistoryList{
@@ -25,8 +20,11 @@ class HistoryList{
         Node* head;
         Node* tail;
         Node* current;
+        void clearForward();
+        
     
     public:
+    void visit(const std::string& url);
     HistoryList();
     ~HistoryList();
 
