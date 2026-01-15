@@ -1,5 +1,13 @@
 #include "HistoryList.h"
 
+bool HistoryList::forward(){
+    if(current == nullptr || current->next==nullptr){
+        return false;
+    }
+    current=current->next;
+    return true;
+}
+
 bool HistoryList::back(){
    if(current == nullptr || current->prev == nullptr){
     return false;
