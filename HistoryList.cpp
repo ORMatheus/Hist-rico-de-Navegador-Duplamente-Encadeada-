@@ -9,13 +9,13 @@ void HistoryList::printHistory() const{
     }
     while(temp != nullptr){
         if(temp == current){ // significa que eu estou na pagina atual do historico
-            std::cout << "Pagina Atual do seu historico :" << temp->url;
+            std::cout << "PAGINA ATUAL DO SEU HISTORICO :" << temp->url << std::endl;
         }else{
-            std::cout << "Site visitado:" <<temp->url << std::endl;
+            std::cout << "SITE VISITADO:" <<temp->url << std::endl;
         }
         temp=temp->next;
     }
-     std::cout <<"Esse foi o seu historico de Acesso!";
+     std::cout <<"Esse foi o seu historico de Acesso!\n";
 }
 
 bool HistoryList::forward(){

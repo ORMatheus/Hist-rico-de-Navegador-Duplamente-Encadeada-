@@ -9,12 +9,12 @@ int main()
 
     while (opcao != 0)
     {
-        cout << "Digite um valor para prosseguirmos:" << endl;
         cout << "1 - Visitar Site" << endl;
         cout << "2 - Voltar" << endl;
         cout << "3 - Avancar" << endl;
         cout << "4 - Mostrar Historico" << endl;
         cout << "0 - Encerrar Programa" << endl;
+        cout << "Digite um valor para prosseguirmos:" ;
         cin >> opcao;
         if (opcao == 1)
         {
@@ -45,9 +45,8 @@ int main()
             {
                 cout << "Impossivel avacar para o proximo site" << endl;
             }
-        }
-        else if (opcao == 4)
-        {
+        }else if(opcao == 4){
+            cout<< "  "<<endl;
             historico.printHistory();
         }
     }
