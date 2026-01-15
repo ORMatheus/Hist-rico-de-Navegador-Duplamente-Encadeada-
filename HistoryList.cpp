@@ -79,5 +79,16 @@ HistoryList::HistoryList(){
 }
 
 HistoryList::~HistoryList(){
-    //por enquanto não mexer
+    Node* temp=head;
+    while (temp !=nullptr)
+    {
+        Node* aux=temp->next;
+        delete temp;
+        temp=aux;
+    }
+
+    head=nullptr;
+    tail=nullptr;
+    current=nullptr;
+    
 }
