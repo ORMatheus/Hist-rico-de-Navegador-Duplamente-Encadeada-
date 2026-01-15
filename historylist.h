@@ -27,6 +27,7 @@ class HistoryList{
     void visit(const std::string& url);
     HistoryList();
     ~HistoryList();
+    bool back();    
 
     
 };
