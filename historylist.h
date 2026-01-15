@@ -22,12 +22,12 @@ class HistoryList{
         Node* current;
         void clearForward();
         
-    
     public:
     void visit(const std::string& url);
     HistoryList();
     ~HistoryList();
     bool back();    
+    bool forward();
 
     
 };
