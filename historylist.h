@@ -28,6 +28,7 @@ class HistoryList{
     ~HistoryList();
     bool back();    
     bool forward();
+    void printHistory() const;
 
     
 };
